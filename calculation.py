@@ -189,3 +189,20 @@ eulers_num = Button(tk_calc, button_params, text='e',
 
 # Здесь мы создаем кнопку для вычисления числа e (euler's number). Мы также устанавливаем 
 # позицию кнопки на первой строке (row=1) и пятом столбце (column=4)
+
+# --2 - й ряд--
+# Синус угла в градусах
+sine = Button(tk_calc, button_params, text='sin',
+              command=trig_sin).grid(row=2, column=0, sticky="nsew")
+# Косинус угла в градусах
+cosine = Button(tk_calc, button_params, text='cos',
+                command=trig_cos).grid(row=2, column=1, sticky="nsew")
+# Тангенс угла в градусах
+tangent = Button(tk_calc, button_params, text='tan',
+                 command=trig_tan).grid(row=2, column=2, sticky="nsew")
+# Котангенс угла в градусах
+cotangent = Button(tk_calc, button_params, text='cot',
+                   command=trig_cot).grid(row=2, column=3, sticky="nsew")
+# Pi(3,14...) число
+pi_num = Button(tk_calc, button_params, text='π',
+                command=lambda: button_click(str(math.pi))).grid(row=2, column=4, sticky="nsew")

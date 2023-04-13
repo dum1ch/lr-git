@@ -110,3 +110,38 @@ def button_equal():
     temp_op = str(eval(calc_operator))
     text_input.set(temp_op)
     calc_operator = temp_op   
+
+'''
+Variables
+'''
+sin, cos, tan = math.sin, math.cos, math.tan
+log, ln = math.log10, math.log
+e = math.exp
+p = math.pi
+E = '*10**'
+# Здесь мы определяем некоторые математические функции (синус, косинус, тангенс, логарифм, 
+# экспонента и число пи) из модуля math, чтобы использовать их в дальнейшем коде. Также 
+# определяются значения "E" и "p", которые будут использоваться в калькуляторе.
+
+tk_calc = Tk()
+# Здесь мы создаем объект главного окна нашей программы, используя класс "Tk" из библиотеки tkinter.
+
+tk_calc.configure(bg="#293C4A", bd=10)
+tk_calc.title("Scientific Calculator")
+# Здесь мы настраиваем окно калькулятора, задавая его цвет фона (bg), размер рамки (bd) и заголовок окна (title).
+
+calc_operator = ""
+text_input = StringVar()
+
+text_display = Entry(tk_calc, font=('sans-serif', 20, 'bold'), textvariable=text_input,
+                     bd=5, insertwidth=5, bg='#BBB', justify='right').grid(columnspan=5, padx=10, pady=15)
+# Здесь мы создаем виджет Entry (поле для ввода текста) с помощью класса Entry из tkinter 
+# и привязываем его к нашему главному окну. Также мы определяем различные параметры виджета,
+# такие как шрифт, цвет фона, размер рамки и положение относительно других элементов в окне.
+
+button_params = {'bd': 5, 'fg': '#BBB',
+                 'bg': '#3C3636', 'font': ('sans-serif', 20, 'bold')}
+button_params_main = {'bd': 5, 'fg': '#000',
+                      'bg': '#BBB', 'font': ('sans-serif', 20, 'bold')}
+# Здесь мы создаем словари параметров для кнопок на калькуляторе. Каждый словарь содержит 
+# значения для параметров кнопок, таких как цвет фона, шрифт, размер рамки и т.д.

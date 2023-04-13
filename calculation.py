@@ -240,3 +240,44 @@ log_base10 = Button(tk_calc, button_params, text='log\u2081\u2080', font=('sans-
 # Логарифм числа с основанием e (ln)
 log_basee = Button(tk_calc, button_params, text='ln',
                    command=lambda: button_click('ln(')).grid(row=4, column=4, sticky="nsew")
+
+# --5 -й ряд--
+# Добавить левую скобку
+left_par = Button(tk_calc, button_params, text='(',
+                  command=lambda: button_click('(')).grid(row=5, column=0, sticky="nsew")
+# Добавить правую круглую скобку
+right_par = Button(tk_calc, button_params, text=')',
+                   command=lambda: button_click(')')).grid(row=5, column=1, sticky="nsew")
+# Изменить знак числа
+signs = Button(tk_calc, button_params, text='\u00B1',
+               command=sign_change).grid(row=5, column=2, sticky="nsew")
+# Преобразовать число в процент
+percentage = Button(tk_calc, button_params, text='%',
+                    command=percent).grid(row=5, column=3, sticky="nsew")
+# Вычислить функцию e^x
+ex = Button(tk_calc, button_params, text='e^x',
+            command=lambda: button_click('e(')).grid(row=5, column=4, sticky="nsew")
+
+# --6-й ряд--
+button_7 = Button(tk_calc, button_params_main, text='7',
+                  command=lambda: button_click('7')).grid(row=6, column=0, sticky="nsew")
+button_8 = Button(tk_calc, button_params_main, text='8',
+                  command=lambda: button_click('8')).grid(row=6, column=1, sticky="nsew")
+button_9 = Button(tk_calc, button_params_main, text='9',
+                  command=lambda: button_click('9')).grid(row=6, column=2, sticky="nsew")
+delete_one = Button(tk_calc, bd=5, fg='#000', font=('sans-serif', 20, 'bold'),
+                    text='DEL', command=button_delete, bg='#db701f').grid(row=6, column=3, sticky="nsew")
+delete_all = Button(tk_calc, bd=5, fg='#000', font=('sans-serif', 20, 'bold'),
+                    text='AC', command=button_clear_all, bg='#db701f').grid(row=6, column=4, sticky="nsew")
+
+# --7-я строка--
+button_4 = Button(tk_calc, button_params_main, text='4',
+                  command=lambda: button_click('4')).grid(row=7, column=0, sticky="nsew")
+button_5 = Button(tk_calc, button_params_main, text='5',
+                  command=lambda: button_click('5')).grid(row=7, column=1, sticky="nsew")
+button_6 = Button(tk_calc, button_params_main, text='6',
+                  command=lambda: button_click('6')).grid(row=7, column=2, sticky="nsew")
+mul = Button(tk_calc, button_params_main, text='*',
+             command=lambda: button_click('*')).grid(row=7, column=3, sticky="nsew")
+div = Button(tk_calc, button_params_main, text='/',
+             command=lambda: button_click('/')).grid(row=7, column=4, sticky="nsew")

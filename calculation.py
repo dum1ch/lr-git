@@ -270,7 +270,7 @@ delete_one = Button(tk_calc, bd=5, fg='#000', font=('sans-serif', 20, 'bold'),
 delete_all = Button(tk_calc, bd=5, fg='#000', font=('sans-serif', 20, 'bold'),
                     text='AC', command=button_clear_all, bg='#db701f').grid(row=6, column=4, sticky="nsew")
 
-# --7-я строка--
+# --7-й ряд--
 button_4 = Button(tk_calc, button_params_main, text='4',
                   command=lambda: button_click('4')).grid(row=7, column=0, sticky="nsew")
 button_5 = Button(tk_calc, button_params_main, text='5',
@@ -281,3 +281,29 @@ mul = Button(tk_calc, button_params_main, text='*',
              command=lambda: button_click('*')).grid(row=7, column=3, sticky="nsew")
 div = Button(tk_calc, button_params_main, text='/',
              command=lambda: button_click('/')).grid(row=7, column=4, sticky="nsew")
+
+# --8-й ряд--
+button_1 = Button(tk_calc, button_params_main, text='1',
+                  command=lambda: button_click('1')).grid(row=8, column=0, sticky="nsew")
+button_2 = Button(tk_calc, button_params_main, text='2',
+                  command=lambda: button_click('2')).grid(row=8, column=1, sticky="nsew")
+button_3 = Button(tk_calc, button_params_main, text='3',
+                  command=lambda: button_click('3')).grid(row=8, column=2, sticky="nsew")
+add = Button(tk_calc, button_params_main, text='+',
+             command=lambda: button_click('+')).grid(row=8, column=3, sticky="nsew")
+sub = Button(tk_calc, button_params_main, text='-',
+             command=lambda: button_click('-')).grid(row=8, column=4, sticky="nsew")
+
+# --9-й ряд--
+button_0 = Button(tk_calc, button_params_main, text='0',
+                  command=lambda: button_click('0')).grid(row=9, column=0, sticky="nsew")
+point = Button(tk_calc, button_params_main, text='.',
+               command=lambda: button_click('.')).grid(row=9, column=1, sticky="nsew")
+exp = Button(tk_calc, button_params_main, text='EXP', font=('sans-serif', 16, 'bold'),
+             command=lambda: button_click(E)).grid(row=9, column=2, sticky="nsew")
+equal = Button(tk_calc, button_params_main, text='=',
+               command=button_equal).grid(row=9, columnspan=2, column=3, sticky="nsew")
+
+
+tk_calc.mainloop()
+# Запуск основного цикла приложения, который обрабатывает все события и взаимодействия с пользователем.

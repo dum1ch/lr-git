@@ -1,15 +1,26 @@
-# Функция сложения
-def add(x, y):
-    return x + y
+#======================#
+#  Tkinter Calculator  #
+#----------------------#
+#  Konstantinos Thanos #
+#   Mathematician, MSc #
+#======================#
 
-# Функция вычитания
-def subtract(x, y):
-    return x - y
+# Импорт пакетов
+from tkinter import *
+import math
+import numpy as np
 
-# Функция умножения
-def multiply(x, y):
-    return x * y
+'''
+Functions
+'''
+# Функция для добавления в ввод текстового отображения
+def button_click(char):
+    global calc_operator
+    calc_operator += str(char)
+    text_input.set(calc_operator)
 
-# Функция деления
-def divide(x, y):
-    return x / y
+# Функция для очистки всей записи от отображения текста
+def button_clear_all():
+    global calc_operator
+    calc_operator = ""
+    text_input.set("")

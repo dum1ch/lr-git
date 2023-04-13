@@ -44,3 +44,28 @@ def fact_func():
     result = str(factorial(int(calc_operator)))
     calc_operator = result
     text_input.set(result)
+
+# Функция для вычисления тригонометрических чисел угла
+def trig_sin():
+    global calc_operator
+    result = str(math.sin(math.radians(int(calc_operator))))
+    calc_operator = result
+    text_input.set(result)
+
+def trig_cos():
+    global calc_operator
+    result = str(math.cos(math.radians(int(calc_operator))))
+    calc_operator = result
+    text_input.set(result)
+
+def trig_tan():
+    global calc_operator
+    result = str(math.tan(math.radians(int(calc_operator))))
+    calc_operator = result
+    text_input.set(result)
+
+def trig_cot():
+    global calc_operator
+    result = str(1/math.tan(math.radians(int(calc_operator))))
+    calc_operator = result
+    text_input.set(result)

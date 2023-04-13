@@ -206,3 +206,37 @@ cotangent = Button(tk_calc, button_params, text='cot',
 # Pi(3,14...) число
 pi_num = Button(tk_calc, button_params, text='π',
                 command=lambda: button_click(str(math.pi))).grid(row=2, column=4, sticky="nsew")
+
+# --3 -й ряд--
+# Мощность 2
+second_power = Button(tk_calc, button_params, text='x\u00B2',
+                      command=lambda: button_click('**2')).grid(row=3, column=0, sticky="nsew")
+# Мощность 3
+third_power = Button(tk_calc, button_params, text='x\u00B3',
+                     command=lambda: button_click('**3')).grid(row=3, column=1, sticky="nsew")
+# Мощность n
+nth_power = Button(tk_calc, button_params, text='x^n',
+                   command=lambda: button_click('**')).grid(row=3, column=2, sticky="nsew")
+# Обратное число
+inv_power = Button(tk_calc, button_params, text='x\u207b\xb9',
+                   command=lambda: button_click('**(-1)')).grid(row=3, column=3, sticky="nsew")
+# Степени 10
+tens_powers = Button(tk_calc, button_params, text='10^x', font=('sans-serif', 15, 'bold'),
+                     command=lambda: button_click('10**')).grid(row=3, column=4, sticky="nsew")
+
+# --4 - й ряд--
+# Квадратный корень из числа
+square_root = Button(tk_calc, button_params, text='\u00B2\u221A',
+                     command=square_root).grid(row=4, column=0, sticky="nsew")
+# Третий корень из числа
+third_root = Button(tk_calc, button_params, text='\u00B3\u221A',
+                    command=third_root).grid(row=4, column=1, sticky="nsew")
+# n-й корень числа
+nth_root = Button(tk_calc, button_params, text='\u221A',
+                  command=lambda: button_click('**(1/')).grid(row=4, column=2, sticky="nsew")
+# Логарифм числа с основанием 10
+log_base10 = Button(tk_calc, button_params, text='log\u2081\u2080', font=('sans-serif', 16, 'bold'),
+                    command=lambda: button_click('log(')).grid(row=4, column=3, sticky="nsew")
+# Логарифм числа с основанием e (ln)
+log_basee = Button(tk_calc, button_params, text='ln',
+                   command=lambda: button_click('ln(')).grid(row=4, column=4, sticky="nsew")

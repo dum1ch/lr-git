@@ -1,8 +1,5 @@
 #======================#
 #  Tkinter Calculator  #
-#----------------------#
-#  Konstantinos Thanos #
-#   Mathematician, MSc #
 #======================#
 
 # Импорт пакетов

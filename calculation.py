@@ -95,4 +95,18 @@ def sign_change():
     else:
         temp = '-'+calc_operator
     calc_operator = temp
-    text_input.set(temp)    
+    text_input.set(temp)
+
+# Функция для вычисления процента от числа
+def percent():
+    global calc_operator
+    temp = str(eval(calc_operator+'/100'))
+    calc_operator = temp
+    text_input.set(temp)
+
+# Функция для нахождения результата операции
+def button_equal():
+    global calc_operator
+    temp_op = str(eval(calc_operator))
+    text_input.set(temp_op)
+    calc_operator = temp_op   
